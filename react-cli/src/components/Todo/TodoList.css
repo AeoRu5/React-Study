@@ -1,0 +1,26 @@
+.todo-list-box {
+  display: flex;
+  margin-top: 200px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.todo-list-box .todo-add {
+  height: 36px;
+  display: flex;
+  margin-bottom: 20px;
+}
+.todo-list-box .todo-add .todo-input {
+  width: 400px;
+  padding: 2px 12px;
+  margin-right: 20px;
+  border-radius: 4px;
+  border: 1px solid #3a3c4c;
+}
+.todo-list-box .todo-add .ant-btn {
+  height: 100%;
+}
+.todo-list-box .todo-list {
+  display: flex;
+  flex-direction: column;
+}

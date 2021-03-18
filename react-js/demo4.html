@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>循环html-2</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="./js/react.js"></script>
+  <script src="./js/react-dom.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/babel-core/5.8.38/browser.js"></script>
+  <script type="text/babel">
+    const names = [
+      <h1 key="0">Hello aeorus!</h1>,
+      <h1 key="1">Hello aiolos!</h1>,
+    ]
+    ReactDOM.render(
+      <div>{names}</div>,
+      document.getElementById('app')
+    )
+  </script>
+</body>
+
+</html>

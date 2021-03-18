@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>state</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="./js/react.js"></script>
+  <script src="./js/react-dom.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/babel-core/5.8.38/browser.js"></script>
+  <script type="text/babel">
+    class StateInitComponent extends React.Component {
+      constructor(props) {
+        super(props)
+        this.state = {
+          text: 'changeInputDisabled',
+          enabled: false
+        }
+        this.handleClick = this.handleClick.bind(this)
+      }
+      render() {
+        return (
+          <div>
+            <input type="text" disabled={this.state.enabled} />
+            <button onClick={this.handleClick}>{this.state.text}</button>
+          </div>
+        )
+      }
+      handleClick() {
+        this.setState({
+          enabled: !this.state.enabled
+        })
+      }
+    }
+    ReactDOM.render(
+      <StateInitComponent />,
+      document.getElementById('app')
+    )
+  </script>
+</body>
+
+</html>

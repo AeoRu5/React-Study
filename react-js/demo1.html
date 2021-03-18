@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>react小例</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="./js/react.js"></script>
+  <script src="./js/react-dom.js"></script>
+  <script>
+    class HelloComponent extends React.Component {
+      render() {
+        return React.createElement('h1', null, 'Hello React!')
+      }
+    }
+    ReactDOM.render(
+      React.createElement(HelloComponent, null),
+      document.getElementById('app')
+    )
+  </script>
+</body>
+
+</html>

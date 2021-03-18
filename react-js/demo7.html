@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>props.children</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="./js/react.js"></script>
+  <script src="./js/react-dom.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/babel-core/5.8.38/browser.js"></script>
+  <script type="text/babel">
+    class PropsChildrenComponent extends React.Component {
+      constructor(props) {
+        super(props)
+      }
+      render() {
+        console.log('render');
+        return (
+          <div>
+            {
+              React.Children.map(this.props.children, child => {
+                return (
+                  <div>{child}</div>
+                )
+              })
+            }
+          </div>
+        )
+      }
+    }
+    ReactDOM.render(
+      <PropsChildrenComponent>
+        <span>Hello aeorus!</span>
+        <span>Hello aiolos!</span>
+      </PropsChildrenComponent>,
+      document.getElementById('app')
+    )
+  </script>
+</body>
+
+</html>
